@@ -7,107 +7,115 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('file:///C:/Users/Ryan/Desktop/7674746c112e81e41a80c3c34536568b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             margin: 0;
             padding: 20px;
         }
         .container {
             max-width: 600px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* 增加透明度提高可讀性 */
             padding: 20px;
             margin: auto;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3, h4 {
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
             color: #333;
         }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        table {
+        input, select, textarea {
             width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
+        input[type="submit"] {
+            background: blue;
+            color: white;
+            cursor: pointer;
         }
-        .character {
-            width: 100px;
-            height: auto;
+        input[type="submit"]:hover {
+            background: darkblue;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>個人簡介</h1>
-        <p>你好，我的名字是 <strong>林家煒</strong>，今年 <strong>19 歲</strong>。</p>
+        <h1>註冊表單</h1>
+        <form action="/submit_form" method="post">
+            
+            <label for="fname">名字：</label>
+            <input type="text" id="fname" name="fname" placeholder="請輸入您的名字" required>
 
-        <h2>我的學歷</h2>
-        <p>2020 - 2024 : Kaohsiung City Zuoying District Haiqing Vocational High School, Taiwan.</p>
-        <p>2024 - 現在 : 國立金門大學 資訊工程系，台灣.</p>    
-
-        <h3>我的興趣</h3>
-        <ul>
-            <li>騎單車</li>
-            <li>跑步</li>
-            <li>聽歌</li>
-            <li>彈琴</li>
-            <li>玩遊戲</li>
-        </ul>
-
-        <h2>註冊表單</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">姓名：</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="age">年齡：</label>
-            <input type="number" id="age" name="age" required><br><br>
+            <label for="lname">姓氏：</label>
+            <input type="text" id="lname" name="lname" placeholder="請輸入您的姓氏" required>
 
             <label for="email">電子郵件：</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email" placeholder="aaa123@gmail.com" required>
 
-            <label for="password">密碼：</label>
-            <input type="password" id="password" name="password" required><br><br>
+            <label for="bday">生日：</label>
+            <input type="date" id="bday" name="bday" required>
 
-            <label for="hobby">興趣：</label>
-            <select id="hobby" name="hobby">
-                <option value="biking">騎單車</option>
-                <option value="running">跑步</option>
-                <option value="listening_music">聽歌</option>
-                <option value="piano">彈琴</option>
-                <option value="gaming">玩遊戲</option>
-            </select><br><br>
+            <label for="fcolor">喜歡的顏色：</label>
+            <input type="color" id="fcolor" name="fcolor">
+
+            <label for="blood_type">血型：</label>
+            <select id="blood_type" name="blood_type">
+                <option value="A">A型</option>
+                <option value="B">B型</option>
+                <option value="AB">AB型</option>
+                <option value="O">O型</option>
+            </select>
+
+            <label for="phone">電話：</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-45-678"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+
+            <label for="subscribe">訂閱：</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+
+            <label for="file">附件：</label>
+            <input type="file" id="file" name="file">
+
+            <label for="intro">自我介紹：</label>
+            <textarea id="intro" name="intro" rows="4" placeholder="簡單介紹一下自己"></textarea>
 
             <input type="submit" value="提交">
         </form>
 
-        <h4>聯絡方式</h4>
+        <h2>關於我</h2>
+        <p>你好，我的名字是 <strong>林家煒</strong>，今年 <strong>19 歲</strong>。</p>
+
+        <h3>學歷</h3>
+        <ul>
+            <li>2020 - 2024 : 高雄市左營區海青工商</li>
+            <li>2024 - 現在 : 國立金門大學 資訊工程系</li>
+        </ul>
+
+        <h3>興趣</h3>
+        <ul>
+            <li>騎單車</li>
+            <li>跑步</li>
+            <li>聽音樂</li>
+            <li>彈鋼琴</li>
+            <li>玩遊戲</li>
+        </ul>
+
+        <h3>聯絡方式</h3>
         <p>學校信箱: 
             <a href="mailto:111210564@student.nqu.edu.tw">111210564@student.nqu.edu.tw</a>
         </p>
-
-        <table>
-            <tr>
-                <td><img class="character" src="file:///C:/Users/Ryan/Desktop/7674746c112e81e41a80c3c34536568b.jpg" alt="角色"></td>
-                <td>初音未來的角色圖片</td>
-            </tr>
-        </table>
-
     </div>
 
 </body>
 </html>
-
-
