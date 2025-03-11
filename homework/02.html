@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊表單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .character {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>個人簡介</h1>
+        <p>你好，我的名字是 <strong>林家煒</strong>，今年 <strong>19 歲</strong>。</p>
+
+        <h2>我的學歷</h2>
+        <p>2020 - 2024 : Kaohsiung City Zuoying District Haiqing Vocational High School, Taiwan.</p>
+        <p>2024 - 現在 : 國立金門大學 資訊工程系，台灣.</p>    
+
+        <h3>我的興趣</h3>
+        <ul>
+            <li>騎單車</li>
+            <li>跑步</li>
+            <li>聽歌</li>
+            <li>彈琴</li>
+            <li>玩遊戲</li>
+        </ul>
+
+        <h2>註冊表單</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="age">年齡：</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="email">電子郵件：</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">密碼：</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="hobby">興趣：</label>
+            <select id="hobby" name="hobby">
+                <option value="biking">騎單車</option>
+                <option value="running">跑步</option>
+                <option value="listening_music">聽歌</option>
+                <option value="piano">彈琴</option>
+                <option value="gaming">玩遊戲</option>
+            </select><br><br>
+
+            <input type="submit" value="提交">
+        </form>
+
+        <h4>聯絡方式</h4>
+        <p>學校信箱: 
+            <a href="mailto:111210564@student.nqu.edu.tw">111210564@student.nqu.edu.tw</a>
+        </p>
+
+        <table>
+            <tr>
+                <td><img class="character" src="file:///C:/Users/Ryan/Desktop/7674746c112e81e41a80c3c34536568b.jpg" alt="角色"></td>
+                <td>初音未來的角色圖片</td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>
+
+
