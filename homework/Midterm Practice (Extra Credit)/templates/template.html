@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">
+        <h2>{{ thread.title }}</h2>
+        <a href="{{ url_for('chat_threads') }}" class="back-btn">← Back to threads</a>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+        {% for msg in messages %}
+            <div class="chat-message user">
+                <strong>You:</strong> {{ msg.content }}
+            </div>
+            <div class="chat-message ai">
+                <strong>AI:</strong> {{ msg.response }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <form hx-post="{{ url_for('ask', thread_id=thread.id) }}" hx-target="#chat-box" hx-swap="afterend" class="chat-form">
+        <input type="text" name="prompt" placeholder="Type a message..." required autocomplete="off">
+        <button type="submit">Send</button>
+    </form>
+</div>
+</body>
+</html>
