@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with AI</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome, {{ user.username }}</h1>
+    <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+    <div class="chat-box" id="chat-box">
+        {% for msg in messages %}
+            <div class="message">
+                <strong>You:</strong> {{ msg.content }}<br>
+                <strong>AI:</strong> {{ msg.response }}
+            </div>
+        {% endfor %}
+    </div>
+    <form hx-post="{{ url_for('ask') }}" hx-target="#chat-box" hx-swap="afterend" class="chat-form">
+        <input type="text" name="prompt" placeholder="Ask something..." required>
+        <button type="submit">Send</button>
+    </form>
+</div>
+</body>
+</html>
