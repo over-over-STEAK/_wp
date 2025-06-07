@@ -1,7 +1,7 @@
-期中期末整合
+### 期中期末整合
 111210564_資工二_林家煒
+### 學期統整
 
-學期統整
 [homework-1](https://github.com/over-over-STEAK/_wp/tree/main/homework/HW.1) 
 功課來源ai 加上網頁設計進階檔案靈感 Deepseek GhtGpt
 [homework-2](https://github.com/over-over-STEAK/_wp/tree/main/homework/HW.1)
@@ -20,7 +20,7 @@
 Python練習 有4題稍微改了些文法
 [homework-5](https://github.com/over-over-STEAK/_wp/tree/main/homework/HW.8)
 ai給靈感 深度學習
-[Midterm](https://github.com/over-over-STEAK/_wp/tree/main/homework/Midterm%20Practice%20(Extra%20Credit)
+[Midterm](https://github.com/over-over-STEAK/_wp/tree/main/homework/Midterm%20Practice%20(Extra%20Credit))
 需要下載附件 在終端機進行 網址連結 為ai回答 使用gpt
 [Final](https://github.com/over-over-STEAK/_wp/tree/main/homework/FinalTest)
 使用c#靈感進行連結 透過xaml設計 貪吃蛇
