@@ -26,7 +26,7 @@
 [homework-7](https://github.com/over-over-STEAK/_wp/tree/main/homework/HW.7)
 Python練習 有4題稍微改了些文法
 
-[homework-5](https://github.com/over-over-STEAK/_wp/tree/main/homework/HW.8)
+[homework-8](https://github.com/over-over-STEAK/_wp/tree/main/homework/HW.8)
 ai給靈感 深度學習
 
 [Midterm](https://github.com/over-over-STEAK/_wp/tree/main/homework/Midterm%20Practice%20(Extra%20Credit))
