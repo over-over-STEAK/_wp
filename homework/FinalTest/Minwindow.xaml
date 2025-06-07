@@ -1,0 +1,46 @@
+<Window x:Class="WpfSnake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="貪吃蛇進階版"
+        Height="600" Width="600"
+        WindowStartupLocation="CenterScreen"
+        Background="LightGray">
+	<Grid>
+
+		<!-- 分數顯示 -->
+		<TextBlock x:Name="ScoreText"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="DarkGreen"
+                   Margin="10,10,0,0"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Text="Score: 0"/>
+
+		<!-- 倒數時間顯示 -->
+		<TextBlock x:Name="CountdownText"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Foreground="DarkRed"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10,45,0,0" />
+                   Text="Time: 120s"/>
+
+		<!-- 重新開始按鈕 -->
+		<Button x:Name="RestartButton"
+                Content="重新開始"
+                Width="100" Height="35"
+                FontWeight="Bold"
+                Margin="0,10,10,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Click="RestartButton_Click"/>
+
+		<!-- 遊戲主畫布 -->
+		<Canvas x:Name="GameCanvas"
+                Background="Black"
+                Margin="10,60,10,10"
+                ClipToBounds="True"/>
+	</Grid>
+</Window>
